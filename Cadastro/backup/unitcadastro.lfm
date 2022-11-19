@@ -1,0 +1,347 @@
+object FormCadastro: TFormCadastro
+  Left = -857
+  Height = 324
+  Top = 264
+  Width = 715
+  Caption = 'Tela de Cadastro'
+  ClientHeight = 324
+  ClientWidth = 715
+  Color = clBtnFace
+  OnCreate = FormCreate
+  ParentBiDiMode = False
+  LCLVersion = '2.2.4.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 21
+    Top = 14
+    Width = 568
+    BevelColor = clBtnFace
+    Caption = 'Tela de Cadastro'
+    Color = clBtnFace
+    ParentBidiMode = False
+    ParentColor = False
+    TabOrder = 0
+  end
+  object PageControlFormulario: TPageControl
+    Left = 8
+    Height = 280
+    Top = 42
+    Width = 568
+    ActivePage = TabSheetCadastrar
+    TabIndex = 0
+    TabOrder = 1
+    object TabSheetCadastrar: TTabSheet
+      Caption = 'Cadastrar'
+      ClientHeight = 252
+      ClientWidth = 560
+      object ButtonSalvar: TButton
+        Left = 368
+        Height = 25
+        Top = 210
+        Width = 75
+        Caption = 'Salvar'
+        OnClick = ButtonSalvarClick
+        TabOrder = 0
+      end
+      object ButtonCancelar: TButton
+        Left = 464
+        Height = 25
+        Top = 210
+        Width = 75
+        Caption = 'Cancelar'
+        OnClick = ButtonCancelarClick
+        TabOrder = 1
+      end
+      object DBEditName: TDBEdit
+        Left = 136
+        Height = 23
+        Top = 42
+        Width = 403
+        DataField = 'Nome'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditRua: TDBEdit
+        Left = 16
+        Height = 23
+        Top = 168
+        Width = 256
+        DataField = 'Rua'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditBairro: TDBEdit
+        Left = 288
+        Height = 23
+        Top = 168
+        Width = 155
+        DataField = 'Bairro'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEditId: TDBEdit
+        Left = 16
+        Height = 23
+        Top = 42
+        Width = 96
+        DataField = 'Id'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object DBEditNumero: TDBEdit
+        Left = 464
+        Height = 23
+        Top = 168
+        Width = 72
+        DataField = 'Numero'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 6
+      end
+      object DBEditEmail: TDBEdit
+        Left = 16
+        Height = 23
+        Top = 105
+        Width = 256
+        DataField = 'Email'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 7
+      end
+      object DBEditTelefone: TDBEdit
+        Left = 288
+        Height = 23
+        Top = 105
+        Width = 248
+        DataField = 'Telefone'
+        DataSource = DataSource1
+        MaxLength = 0
+        ParentBiDiMode = False
+        TabOrder = 8
+      end
+      object StaticTextNome: TStaticText
+        Left = 136
+        Height = 17
+        Top = 21
+        Width = 65
+        Caption = 'Nome'
+        TabOrder = 9
+      end
+      object StaticTextEmail: TStaticText
+        Left = 16
+        Height = 17
+        Top = 84
+        Width = 65
+        Caption = 'Email'
+        TabOrder = 10
+      end
+      object StaticTextTelefone: TStaticText
+        Left = 288
+        Height = 17
+        Top = 84
+        Width = 65
+        Caption = 'Telefone'
+        TabOrder = 11
+      end
+      object StaticTextRua: TStaticText
+        Left = 16
+        Height = 17
+        Top = 147
+        Width = 65
+        Caption = 'Rua'
+        TabOrder = 12
+      end
+      object StaticTextBairro: TStaticText
+        Left = 288
+        Height = 17
+        Top = 147
+        Width = 65
+        Caption = 'Bairro'
+        TabOrder = 13
+      end
+      object StaticTextNumero: TStaticText
+        Left = 464
+        Height = 17
+        Top = 147
+        Width = 65
+        Caption = 'Numero'
+        TabOrder = 14
+      end
+      object StaticTextId: TStaticText
+        Left = 16
+        Height = 17
+        Top = 21
+        Width = 65
+        Caption = 'ID'
+        TabOrder = 15
+      end
+    end
+    object TabSheetCadastrados: TTabSheet
+      Caption = 'Cadastrados'
+      ClientHeight = 252
+      ClientWidth = 560
+      object DBGrid1: TDBGrid
+        Left = 16
+        Height = 175
+        Top = 14
+        Width = 520
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'Id'
+            Width = 25
+            FieldName = 'Id'
+          end        
+          item
+            Title.Caption = 'Nome'
+            Width = 48
+            FieldName = 'Nome'
+          end        
+          item
+            Title.Caption = 'Email'
+            Width = 44
+            FieldName = 'Email'
+          end        
+          item
+            Title.Caption = 'Telefone'
+            Width = 60
+            FieldName = 'Telefone'
+          end        
+          item
+            Title.Caption = 'Rua'
+            Width = 35
+            FieldName = 'Rua'
+          end        
+          item
+            Title.Caption = 'Bairro'
+            Width = 46
+            FieldName = 'Bairro'
+          end        
+          item
+            Title.Caption = 'Numero'
+            Width = 59
+            FieldName = 'Numero'
+          end>
+        DataSource = DataSource1
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        TabOrder = 0
+      end
+      object ButtonInserir: TButton
+        Left = 272
+        Height = 25
+        Top = 210
+        Width = 75
+        Caption = 'Inserir'
+        OnClick = ButtonInserirClick
+        TabOrder = 1
+      end
+      object ButtonAlterar: TButton
+        Left = 368
+        Height = 25
+        Top = 210
+        Width = 75
+        Caption = 'Alterar'
+        OnClick = ButtonAlterarClick
+        TabOrder = 2
+      end
+      object ButtonExcluir: TButton
+        Left = 461
+        Height = 25
+        Top = 210
+        Width = 75
+        Caption = 'Excluir'
+        OnClick = ButtonExcluirClick
+        TabOrder = 3
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = CSVDataset1
+    Left = 704
+    Top = 203
+  end
+  object CSVDataset1: TCSVDataset
+    FieldDefs = <>
+    CSVOptions.FirstLineAsFieldNames = False
+    CSVOptions.DefaultFieldLength = 255
+    CSVOptions.Delimiter = ','
+    CSVOptions.QuoteChar = '"'
+    CSVOptions.LineEnding = #13#10
+    CSVOptions.IgnoreOuterWhitespace = False
+    CSVOptions.QuoteOuterWhitespace = True
+    Left = 704
+    Top = 126
+    object CSVDataset1Nome: TStringField
+      FieldKind = fkData
+      FieldName = 'Nome'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object CSVDataset1Id: TLongintField
+      FieldKind = fkData
+      FieldName = 'Id'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CSVDataset1Email: TStringField
+      FieldKind = fkData
+      FieldName = 'Email'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object CSVDataset1Telefone: TLongintField
+      FieldKind = fkData
+      FieldName = 'Telefone'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CSVDataset1Rua: TStringField
+      FieldKind = fkData
+      FieldName = 'Rua'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object CSVDataset1Bairro: TStringField
+      FieldKind = fkData
+      FieldName = 'Bairro'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object CSVDataset1Numero: TStringField
+      FieldKind = fkData
+      FieldName = 'Numero'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+  end
+end
